@@ -24,6 +24,7 @@ const Header = () => {
                     </Offcanvas.Header>
                     <Offcanvas.Body>
                         <Nav className="justify-content-end flex-grow-1 pe-3 fw-bold">
+                            <Nav.Link className={pathname === '/' ? 'active border-bottom border-3 border-dark' : ''} as={Link} to="/">General</Nav.Link>
                             <Nav.Link className={pathname === '/business' ? 'active border-bottom border-3 border-dark' : ''} as={Link} to="/business">Business</Nav.Link>
                             <Nav.Link className={pathname === '/entertainment' ? 'active border-bottom border-3 border-dark' : ''} as={Link} to="/entertainment">Entertainment</Nav.Link>
                             <Nav.Link className={pathname === '/health' ? 'active border-bottom border-3 border-dark' : ''} as={Link} to="/health">Health</Nav.Link>

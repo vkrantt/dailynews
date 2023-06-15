@@ -10,9 +10,9 @@ app.use(express.json());
 
 app.get('/api', async (req, res) => {
     const url = 'https://newsapi.org/v2/top-headlines?' + req._parsedUrl.query;
-    const a = await axios(url);
-    const r = await a.data;
-    res.json(r);
+    const response = await axios(url);
+    const data = await response.data;
+    res.json(data);
 })
 
 app.listen(port, () => {

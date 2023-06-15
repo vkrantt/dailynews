@@ -1,22 +1,22 @@
 import React from 'react';
 import Header from './components/header/Header';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './pages/home/Home';
 
 const App = () => {
   return (
-    <Router>
+    <BrowserRouter>
       <Header />
-      <Switch>
-        <Route exact path="/"> <Home type="general" /> </Route>
-        <Route path="/business"> <Home type="business" /> </Route>
-        <Route path="/entertainment"> <Home type="entertainment" /> </Route>
-        <Route path="/health"> <Home type="health" /> </Route>
-        <Route path="/science"> <Home type="science" /> </Route>
-        <Route path="/sports"> <Home type="sports" /> </Route>
-        <Route path="/technology"> <Home type="technology" /> </Route>=
-      </Switch>
-    </Router>
+      <Routes>
+        <Route path="/" element={<Home type="general" pageItem={9} />} />
+        <Route path="/business" element={<Home type="business" pageItem={9} />} />
+        <Route path="/entertainment" element={<Home type="entertainment" pageItem={9} />} />
+        <Route path="/health" element={<Home type="health" pageItem={9} />} />
+        <Route path="/science" element={<Home type="science" pageItem={9} />} />
+        <Route path="/sports" element={<Home type="sports" pageItem={9} />} />
+        <Route path="/technology" element={<Home type="technology" pageItem={9} />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
